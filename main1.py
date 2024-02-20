@@ -22,7 +22,7 @@ def load_img(path):
 pygame.init()
 
 # Game Constants
-SCREEN_WIDTH, SCREEN_HEIGHT = 900, 900
+SCREEN_WIDTH, SCREEN_HEIGHT = 960, 960
 BOARD_WIDTH, BOARD_HEIGHT = SCREEN_WIDTH, SCREEN_HEIGHT
 CELL_SIZE = (9, 9)  # Pixel dimensions of each grid cell
 FPS = 60
@@ -44,7 +44,7 @@ enemies = [
     WiseEnemy(20,5,0),
     WiseEnemy(20,3,1),
     WiseEnemy(70,1,2),
-]*49
+]*49+[FlyingEnemy(70,1,2,image=r"./images/default_flying_unit.png"),]*2
 
 def draw_grid():
     for row in range(grid_board.cell_size_height):
